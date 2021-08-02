@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+}
+
+.navBackground{
+    background: rgba(0, 0, 0, 0.9);
+    height: 70px;
+    transition: 0.5s;
+}
+
+.navCenter{
+    width: 90%;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.navInline{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navInline ul{
+    padding-left: 0;
+    list-style: none;
+    color: white;
+}
+
+.list{
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+}
+
+.toggle{
+    display: none;
+}
+
+@media (max-width:768px){
+    .toggle{
+        display: block;
+    }
+
+    .navBackground.activeBack{
+        height: 280px;
+    }
+
+    .navBackground.activeBack .list{
+        display: block;
+    }
+    .list{
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        width: 90%;
+        display: none;
+    }
+
+    .list li{
+        margin: 10px 0;
+        border-bottom: 1px solid white;
+    }
+}
